@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../shared/components/headConfig.ejs') %>
+  <link rel="stylesheet" href="../dist/contactUs.css" />
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <!-- Start your project here-->
+  <header>
+    <%- include('../shared/components/navBar.ejs') %>
+  </header>
+
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5 violet-color"><b>Our Blogs</b></h4>
+
+        <div class="row">
+          <% blogs.forEach(function(blog) { %>
+             <%- include('../shared/components/card.ejs', {data: blog, button: {name: "Read", href: "/blog"}}) %>
+              <% })%>
+        </div>
+    </div>
+    </div>
+    </section>
+    <!--Section: Content-->
+
+    <!-- Pagination -->
+    <nav class="my-4" aria-label="...">
+      <ul class="pagination pagination-circle justify-content-center">
+        <% if (active !=1) { %>
+          <li class="page-item">
+            <a class="page-link" href="/blogs?page=<%= active - 2 %>" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <% } %>
+
+            <% for (var i=0; i < pages.length; i++) { %>
+              <% if (pages[i] !=active) { %>
+                <li class="page-item">
+                  <a class="page-link" href="/blogs?page=<%= pages[i] -1 %>">
+                    <%= pages[i] %>
+                  </a>
+                </li>
+                <% } %>
+                  <% if (pages[i]==active) { %>
+                    <li class="page-item active" aria-current="page">
+                      <a class="page-link" href="#">
+                        <%= pages[i] %><span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                    <% }%>
+                      <% }%>
+
+                        <% if (active !=pages.length) { %>
+                          <li class="page-item">
+                            <a class="page-link" href="/blogs?page=<%= active %>">Next</a>
+                          </li>
+                          <% }%>
+      </ul>
+    </nav>
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <%- include('../shared/components/footer.ejs') %>
+
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+
+</html>

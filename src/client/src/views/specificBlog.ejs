@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../shared/components/headConfig.ejs') %>
+    <link rel="stylesheet" href="../dist/contactUs.css" />
+  </head>
+  <body>
+    <!--Main Navigation-->
+    <!-- Start your project here-->
+    <header><%- include('../shared/components/navBar.ejs') %></header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main>
+      <section id="section_1_Post">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-8">
+              <img
+                src="../shared/img/medhat.jpg"
+                class="rounded-circle"
+                style="width: 75px"
+                alt="Avatar"
+              />
+              <p
+                class="my-2"
+                style="display: inline-block; vertical-align: middle"
+              >
+                Mohamed Medhat <br />
+                Published <%=blog.createdAt%>
+              </p>
+              <div class="bg-image mt-4">
+                <img
+                  crossorigin="anonymous"
+                  class="shadow-2-strong"
+                  style="width: 100%"
+                  class="w-100"
+                  src="<%=blog.picture%>"
+                  alt="react"
+                />
+              </div>
+
+              <h4 class="my-2"><b><%=blog.title%></b></h4>
+              <p class="my-2">
+                t is a long established fact that a reader will be distracted by
+                the readable content of a page when looking at its layout. The
+                point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to using 'Content here,
+                content here', making it look like readable English.
+              </p>
+
+              <h5>How to start</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged.
+              </p>
+
+              <h5>Course lessons</h5>
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+              </p>
+              <ul>
+                <li>passages of Lorem</li>
+                <li>Ipsum available</li>
+                <li>alteration in some form</li>
+                <li>anything embarrassing hidden</li>
+                <li>randomised words</li>
+                <li>predefined chunks as necessary</li>
+                <li>combined with a handful</li>
+              </ul>
+            </div>
+            <div class="col-md-4 Post_Ad_Padding">
+              <section id="ad1_post_page">
+                <div class="Ad_Fram text-center mb-3">
+                  <img
+                    class="shadow-2-strong"
+                    src="https://www.wordstream.com/wp-content/uploads/2021/07/persuasive-ads-coca-cola-1.jpg"
+                    style="width: 100%"
+                    alt="ad"
+                  />
+                  <h4 class="text-center"></h4>
+                  <p class="text-center">
+                    It is a long established fact that a reader will be
+                    distracted
+                  </p>
+                  <button href="#" class="Btn_Style Btn_Padding w-100">
+                    JOIN NOW!
+                  </button>
+                </div>
+              </section>
+              <section id="ad1_post_page">
+                <div class="Ad_Fram my-5">
+                  <img
+                    class="w-100 rounded shadow-2-strong"
+                    src="img/ad7.jpg"
+                    alt=""
+                  />
+                </div>
+              </section>
+              <section id="ad1_post_page">
+                <div class="Ad_Fram my-5">
+                  <img
+                    class="w-100 rounded shadow-2-strong"
+                    src="https://scontent.fcai2-2.fna.fbcdn.net/v/t39.30808-6/264314375_2400325683437948_7284409770988892847_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=raHv0uiEsO0AX_TWVxR&_nc_ht=scontent.fcai2-2.fna&oh=00_AT9RFqYiiP-LdkeMT8H7LPEstPlOEqnPdi0I3csYzTN6Bg&oe=62AE770C"
+                    alt=""
+                  />
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--Main layout-->
+
+    <%- include('../shared/components/footer.ejs') %>
+  </body>
+</html>

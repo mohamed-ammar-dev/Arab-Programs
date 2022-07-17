@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../shared/components/headConfig.ejs') %>
+    <link rel="stylesheet" href="../dist/contactUs.css" />
+  </head>
+  <body>
+    <header><%- include('../shared/components/navBar.ejs') %></header>
+
+    <main>
+      <section>
+        <div class="container py-5 my-5">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <h1 class="Big_ContactUs_Text">
+                How can i <br />
+                contact you?
+              </h1>
+              <p>
+                This contact page is only for general questions regarding the
+                site, reporting technical problems, and inquiries related to
+                advertising, also you can send us free coupons from Udemy to put
+                it on site.
+              </p>
+              <p>
+                <b>
+                  Don’t use the form to report that certain coupons are no
+                  longer working or to request a coupon for a course as we give
+                  you the course we found every day with limited time so follow
+                  us every day.
+                </b>
+              </p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <form>
+                <!-- Name input -->
+                <div class="form-outline mb-4">
+                  <input required="" id="name" type="text" />
+                  <label alt="Name" for="inputName" placeholder="Name"></label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input required="" id="email" type="text" />
+                  <label
+                    alt="Email"
+                    for="inputEmail"
+                    placeholder="Email"
+                  ></label>
+                </div>
+
+                <!-- Message input -->
+                <div class="form-outline mb-4">
+                  <textarea
+                    required=""
+                    id="message"
+                    cols="25"
+                    rows="5"
+                  ></textarea>
+                  <label
+                    alt="Message"
+                    for="textMessage"
+                    placeholder="Message"
+                  ></label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="button" class="Btn_Style mb-4" id="sendFeedback">
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('../shared/components/footer.ejs') %>
+
+    <script src="../shared/js/mdb.min.js" type="text/javascript"></script>
+    <script src="../dist/contactUs.js" type="text/javascript"></script>
+  </body>
+</html>

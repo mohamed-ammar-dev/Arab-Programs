@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%- include('../shared/components/headConfig.ejs') %>
+  <link rel="stylesheet" href="../dist/contactUs.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+<header>
+
+  <%- include('../shared/components/navBar.ejs') %>
+
+  <!-- Jumbotron -->
+  <div class="p-5 text-center Background_Violet" id="home-cover" style="background-image: url('../shared/img/cover12.jpg')">
+    <h1 class="violet-color"><b>Save Your Money!</b></h1>
+        <h2><b>Take discounts from tutorials.</b></h2>
+  </div>
+  <!-- Jumbotron -->
+
+
+    </header>
+
+    <main>
+      <!-- coupon gallery start -->
+      <section id="Coupon_Gallery">
+        <div class="row">
+          <% lastCoupons.forEach(function(coupon) { %>
+     <div class="col-sm-12 col-md-4 p-1">
+            <div class="image_container">
+              <img
+                crossorigin="anonymous"
+                src="<%=coupon.picture%>"
+                alt="Avatar"
+                class="image_overlay"
+              />
+              <div class="mask"></div>
+               <div class="textPlace">
+             <p class="p__grid"><%=coupon.title%></p> 
+          </div>
+              <div class="overlay">
+                <a href="/coupon/<%=coupon.id%>"><button class="button_overlay">view coupon</button></a>
+              </div>
+            </div>
+          </div>
+        <% })%>
+        </div>
+            <a class="Btn_Style Btn_Padding" href="#coupons-section" role="button">Discover More</a>
+
+        <!-- second row of images end -->
+      </section>
+      <!-- coupon gallery start end -->
+
+      <!-- text section -->
+      <section>
+        <div class="container">
+          <div class="row p-5">
+            <div class="col-md-12 p-5">
+              <h1 class="text-center violet-color"><b>What we are giving you?</b></h1>
+              <p class="text-center px-5">
+               We are giving you the chance to transform from low knowledge and low skills into high knowledge and high skills in technology field by giving you free coupon’s and discounts of courses from Udemy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End text section -->
+
+      <!-- Start Ads row -->
+      <section class="ads">
+        <div class="-fx-image-gal">
+          <div class="-fx-gal-item">
+            <div class="-fx-gal-image-thumb" tabindex="1">
+              <img src="https://penji.co/wp-content/uploads/2019/04/Best-Food-Ad-Designs.jpg" />
+            </div>
+            <div class="-fx-gal-image-big">
+              <img src="https://penji.co/wp-content/uploads/2019/04/Best-Food-Ad-Designs.jpg" />
+            </div>
+          </div>
+          <!-- /-fx-gal-item -->
+
+          <div class="-fx-gal-item">
+            <div class="-fx-gal-image-thumb" tabindex="1">
+              <img src="https://i.insider.com/5150710969beddc11500000b?width=750&format=jpeg&auto=webp" />
+            </div>
+            <div class="-fx-gal-image-big">
+              <img src="https://i.insider.com/5150710969beddc11500000b?width=750&format=jpeg&auto=webp" />
+            </div>
+          </div>
+          <!-- /-fx-gal-item -->
+
+          <div class="-fx-gal-item">
+            <div class="-fx-gal-image-thumb" tabindex="1">
+              <img src="https://i.ytimg.com/vi/1iZl0bCyDPQ/maxresdefault.jpg" />
+            </div>
+            <div class="-fx-gal-image-big">
+              <img src="https://i.ytimg.com/vi/1iZl0bCyDPQ/maxresdefault.jpg" />
+            </div>
+          </div>
+          <!-- /-fx-gal-item -->
+
+          <div class="-fx-gal-item">
+            <div class="-fx-gal-image-thumb" tabindex="1">
+              <img src="https://www.acemetrix.com/wp-content/uploads/2019/12/Frito-Lay-Anna-Kendrick-Holiday-Ad-1200x450.png" />
+            </div>
+            <div class="-fx-gal-image-big">
+              <img src="https://www.acemetrix.com/wp-content/uploads/2019/12/Frito-Lay-Anna-Kendrick-Holiday-Ad-1200x450.png" />
+            </div>
+          </div>
+          <!-- /-fx-gal-item -->
+
+          <div class="-fx-gal-item">
+            <div class="-fx-gal-image-thumb" tabindex="1">
+              <img src="https://penji.co/wp-content/uploads/2019/04/Best-Food-Ad-Designs.jpg" />
+            </div>
+            <div class="-fx-gal-image-big">
+              <img src="https://www.wordstream.com/wp-content/uploads/2021/07/persuasive-ads-coca-cola-1.jpg" />
+            </div>
+          </div>
+          <!-- /-fx-gal-item -->
+
+          <div class="-fx-gal-item">
+            <div class="-fx-gal-image-thumb" tabindex="1">
+              <img src="https://www.wordstream.com/wp-content/uploads/2021/07/persuasive-ads-coca-cola-1.jpg" />
+            </div>
+            <div class="-fx-gal-image-big">
+              <img src="https://www.wordstream.com/wp-content/uploads/2021/07/persuasive-ads-coca-cola-1.jpg"/>
+            </div>
+          </div>
+          <!-- /-fx-gal-item -->
+        </div>
+        <!-- /gallery -->
+      </section>
+
+      <!-- End Ads row -->
+
+      <!-- text section -->
+      <section>
+        <div class="container mt-5 px-5 pt-5">
+          <div class="row px-5">
+            <div class="col-md-12 px-5">
+              <h1 class="text-center violet-color"><b>Discover more courses</b></h1>
+              <p class="text-center px-5">
+                Take the chance to get in a free world of courses every day.
+              </p>
+              <hr class="hr" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End text section -->
+
+      <!-- more Coupons -->
+      <div class="container pb-5 mb-5 mt-3" id="coupons-section">
+        <!-- Start row -->
+          <div class="row mb-4 row-cols-1 row-cols-md-3 g-4">
+        <% coupons.forEach(function(coupon) { %>
+             <%- include('../shared/components/card.ejs', {data: coupon, button: {name: "Get Coupon", href: "/coupon"}}) %>
+          <% })%>
+        </div>
+
+        <!-- End row  -->
+
+       
+      <!-- more coupons end -->
+    </main>
+
+    <%- include('../shared/components/footer.ejs') %>
+
+    <!-- End your project here-->
+  </body>
+    <script src="../shared/js/mdb.min.js" type="text/javascript"></script>
+</html>
